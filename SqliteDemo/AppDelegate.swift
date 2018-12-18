@@ -3,7 +3,7 @@
 //  SqliteDemo
 //
 //  Created by liguiyang on 2018/12/5.
-//  Copyright © 2018年 liguiyang. All rights reserved.
+//  Copyright © 2018年 liyuting. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let result = SQLiteDB.shared.open(dbPath: "", copyFile: true)
+        print("result:\(result)")
+        print(NSHomeDirectory())
+        print(Bundle.main.bundlePath)
         return true
     }
 

@@ -12,6 +12,11 @@
 		C6147CF421B75FEA006ECCA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6147CF221B75FEA006ECCA4 /* Main.storyboard */; };
 		C6147CF621B75FEB006ECCA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6147CF521B75FEB006ECCA4 /* Assets.xcassets */; };
 		C6147CF921B75FEB006ECCA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6147CF721B75FEB006ECCA4 /* LaunchScreen.storyboard */; };
+		C6147D0521B760C6006ECCA4 /* SQLiteBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6147D0021B760C6006ECCA4 /* SQLiteBase.swift */; };
+		C6147D0621B760C6006ECCA4 /* CloudDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6147D0121B760C6006ECCA4 /* CloudDB.swift */; };
+		C6147D0721B760C6006ECCA4 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6147D0221B760C6006ECCA4 /* SQLiteDB.swift */; };
+		C6147D0821B760C6006ECCA4 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6147D0321B760C6006ECCA4 /* SQLTable.swift */; };
+		C6147D0B21B7633E006ECCA4 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = C6147D0A21B7633E006ECCA4 /* data.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,12 @@
 		C6147CF521B75FEB006ECCA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6147CF821B75FEB006ECCA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6147CFA21B75FEB006ECCA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6147D0021B760C6006ECCA4 /* SQLiteBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteBase.swift; sourceTree = "<group>"; };
+		C6147D0121B760C6006ECCA4 /* CloudDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDB.swift; sourceTree = "<group>"; };
+		C6147D0221B760C6006ECCA4 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		C6147D0321B760C6006ECCA4 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		C6147D0421B760C6006ECCA4 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		C6147D0A21B7633E006ECCA4 /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +65,28 @@
 		C6147CED21B75FEA006ECCA4 /* SqliteDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C6147D0921B760D2006ECCA4 /* DB */,
 				C6147CEE21B75FEA006ECCA4 /* AppDelegate.swift */,
 				C6147CF021B75FEA006ECCA4 /* ViewController.swift */,
 				C6147CF221B75FEA006ECCA4 /* Main.storyboard */,
+				C6147D0A21B7633E006ECCA4 /* data.db */,
 				C6147CF521B75FEB006ECCA4 /* Assets.xcassets */,
 				C6147CF721B75FEB006ECCA4 /* LaunchScreen.storyboard */,
 				C6147CFA21B75FEB006ECCA4 /* Info.plist */,
 			);
 			path = SqliteDemo;
+			sourceTree = "<group>";
+		};
+		C6147D0921B760D2006ECCA4 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				C6147D0421B760C6006ECCA4 /* Bridging-Header.h */,
+				C6147D0121B760C6006ECCA4 /* CloudDB.swift */,
+				C6147D0021B760C6006ECCA4 /* SQLiteBase.swift */,
+				C6147D0221B760C6006ECCA4 /* SQLiteDB.swift */,
+				C6147D0321B760C6006ECCA4 /* SQLTable.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6147CF921B75FEB006ECCA4 /* LaunchScreen.storyboard in Resources */,
+				C6147D0B21B7633E006ECCA4 /* data.db in Resources */,
 				C6147CF621B75FEB006ECCA4 /* Assets.xcassets in Resources */,
 				C6147CF421B75FEA006ECCA4 /* Main.storyboard in Resources */,
 			);
@@ -136,7 +162,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6147CF121B75FEA006ECCA4 /* ViewController.swift in Sources */,
+				C6147D0621B760C6006ECCA4 /* CloudDB.swift in Sources */,
+				C6147D0721B760C6006ECCA4 /* SQLiteDB.swift in Sources */,
+				C6147D0521B760C6006ECCA4 /* SQLiteBase.swift in Sources */,
 				C6147CEF21B75FEA006ECCA4 /* AppDelegate.swift in Sources */,
+				C6147D0821B760C6006ECCA4 /* SQLTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-0010056.SqliteDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SqliteDemo/DB/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,6 +338,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-0010056.SqliteDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SqliteDemo/DB/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
